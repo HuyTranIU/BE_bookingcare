@@ -1,0 +1,36 @@
+{
+	"name": "be",
+	"version": "1.0.0",
+	"description": "Clone Bookingcare",
+	"main": "server.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"clean": "rm -rf build && mkdir build",
+		"build-babel": "babel ./src -d ./build/src",
+		"build": "npm run clean && npm run build-babel",
+		"production": "npm run build && node ./build/src/server.js",
+		"dev": "nodemon --exec ./node_modules/.bin/babel-node ./src/server.js"
+	},
+	"keywords": [
+		"Clone Bookingcare"
+	],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"dotenv": "^16.0.3",
+		"ejs": "^3.1.8",
+		"express": "^4.18.2",
+		"mysql2": "^2.3.3",
+		"sequelize": "^6.29.0"
+	},
+	"devDependencies": {
+		"@babel/cli": "^7.21.0",
+		"@babel/core": "^7.21.0",
+		"@babel/node": "^7.20.7",
+		"@babel/plugin-transform-runtime": "^7.21.0",
+		"@babel/preset-env": "^7.20.2",
+		"body-parser": "^1.20.2",
+		"nodemon": "^2.0.20",
+		"sequelize-cli": "^6.6.0"
+	}
+}
